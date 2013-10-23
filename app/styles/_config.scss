@@ -1,0 +1,53 @@
+/////// Config defaults for site colors ///////
+// -----------------------------------------------------------------------------
+$black: #000000;
+$white: #ffffff;
+
+$dark-grey: #444444;
+
+$red: #cc0000;
+$green: #009900;
+$blue: #0000cc;
+
+$base-background-color: #e6e6e6;
+$base-border-color: darken($base-background-color, 5);
+$base-box-shadow-color: $base-border-color;
+
+/////// Config defaults for site border style ///////
+// -----------------------------------------------------------------------------
+$base-border-radius: 3px;
+$base-border-width: 1px;
+$base-border-style: solid;
+$base-border: $base-border-width $base-border-style $base-border-color;
+
+/////// Page dimension configuration ///////
+// -----------------------------------------------------------------------------
+$base-page-width: 70rem;
+
+/////// Typography configuration ///////
+// -----------------------------------------------------------------------------
+$primary_font: Raleway, Helvetica, sans-serif;
+$secondary_font: Museo, serif;
+
+$base-font-size: 16px;
+$small-font-size: 12px;
+
+/////// Config defaults for buttons ///////
+// -----------------------------------------------------------------------------
+
+/////// UI @media breakpoint defaults ///////
+// -----------------------------------------------------------------------------
+$small-screen: 768px;
+$medium-screen: 1280px;
+$large-screen: 1440px;
+
+$screen: "only screen";
+$small: "only screen and (min-width: #{$small-screen})";
+$medium: "only screen and (min-width: #{$medium-screen})";
+$large: "only screen and (min-width: #{$large-screen})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+
+/////// Site Icons and Images ///////
+// -----------------------------------------------------------------------------
+$base-image-width: 300px;

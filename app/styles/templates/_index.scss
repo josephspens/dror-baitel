@@ -1,0 +1,70 @@
+body {
+	font-size: $base-font-size;
+	color: $dark-grey;
+}
+
+header {
+	min-height: 20em;
+	position: relative;
+
+	h1 {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+	}
+}
+
+#container {
+	@include background(image-url('sos.png'));
+	overflow: hidden;
+	border-top: $base-border;
+}
+
+.container {
+	max-width: $base-page-width;
+	margin: 0 auto;
+}
+
+.experiences {
+	overflow: hidden;
+
+	.experience {
+		margin: 6rem 0;
+
+		&:nth-of-type(even) {
+			img {
+				float: right;
+				margin-left: 1rem;
+			}
+		}
+		&:nth-of-type(odd) {
+			img {
+				float: left;
+				margin-right: 1rem;
+			}
+		}
+		.content {
+			padding: 1rem;
+		}
+	}
+}
+
+.skills {
+	$columns: 6;
+
+	max-width: $base-page-width;
+	margin: 0 auto 3rem;
+	overflow: hidden;
+
+	.skill {
+		$margin: 1rem;
+
+		float: left;
+		max-width: (($base-page-width - ($margin * ($columns - 1)) - em($base-border-width * 2)) / $columns);
+		margin-left: $margin;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
