@@ -308,7 +308,14 @@ module.exports = function (grunt) {
 					dot: true,
 					cwd: 'heroku',
 					dest: '<%= yeoman.dist %>',
-					src: '*'
+					src: '*',
+					rename: function (dest, src) {
+						var path = require('path');
+						if (src === 'distpackage.json') {
+							return path.join(dest, 'package.json');
+						}
+						return path.join(dest, src);
+					}
 				}]
 			},
 			styles: {
@@ -316,14 +323,7 @@ module.exports = function (grunt) {
 				dot: true,
 				cwd: '<%= yeoman.app %>/styles',
 				dest: '.tmp/styles/',
-				src: '{,*/}*.css',
-				rename: function (dest, src) {
-					var path = require('path');
-					if (src === 'distpackage.json') {
-						return path.join(dest, 'package.json');
-					}
-					return path.join(dest, src);
-				}
+				src: '{,*/}*.css'
 			}
 		},
 		modernizr: {
