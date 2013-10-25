@@ -306,6 +306,19 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					dot: true,
+					cwd: '<%= yeoman.app %>',
+					dest: '<%= yeoman.dist %>',
+					src: [
+						'*.{ico,png,txt}',
+						'.htaccess',
+						'images/{,*/}*.{webp,gif}',
+						'styles/fonts/{,*/}*.*',
+						'bower_components/sass-bootstrap/fonts/*.*'
+					]
+				},
+				{
+					expand: true,
+					dot: true,
 					cwd: 'heroku',
 					dest: '<%= yeoman.dist %>',
 					src: '*',
