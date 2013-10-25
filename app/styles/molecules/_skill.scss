@@ -1,6 +1,7 @@
 .skill {
-	$spacing: 0.5rem;
+	$spacing: 0.5em;
 
+	font-size: 1rem;
 	@include border-radius($base-border-radius);
 	@include box-sizing(border-box);
 	background-color: $base-background-color;
@@ -10,11 +11,11 @@
 		padding: $spacing;
 	}
 	p {
-		font-size: 0.8rem;
+		font-size: 0.8em;
 		padding: 0 $spacing $spacing;
 	}
 	.image {
-		height: 6rem;
+		height: 6em;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}

@@ -10,6 +10,7 @@ $green: #009900;
 $blue: #0000cc;
 
 $base-background-color: #e6e6e6;
+$inverted-background-color: $dark-grey;
 $base-border-color: darken($base-background-color, 5);
 $base-box-shadow-color: $base-border-color;
 
@@ -22,7 +23,7 @@ $base-border: $base-border-width $base-border-style $base-border-color;
 
 /////// Page dimension configuration ///////
 // -----------------------------------------------------------------------------
-$base-page-width: 70rem;
+$base-page-width: 70em;
 
 /////// Typography configuration ///////
 // -----------------------------------------------------------------------------

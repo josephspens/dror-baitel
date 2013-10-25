@@ -1,21 +1,11 @@
 body {
 	font-size: $base-font-size;
 	color: $dark-grey;
-}
-
-header {
-	min-height: 20em;
-	position: relative;
-
-	h1 {
-		width: 100%;
-		position: absolute;
-		top: 50%;
-	}
+	text-shadow: 1px 1px 0px $white;
 }
 
 #container {
-	@include background(image-url('sos.png'));
+	background: image-url('sos.png');
 	overflow: hidden;
 	border-top: $base-border;
 }
@@ -26,25 +16,21 @@ header {
 }
 
 .experiences {
+	$columns: 3;
+
 	overflow: hidden;
+	padding: 3em 0;
 
 	.experience {
-		margin: 6rem 0;
+		$margin: 1em;
 
-		&:nth-of-type(even) {
-			img {
-				float: right;
-				margin-left: 1rem;
-			}
-		}
-		&:nth-of-type(odd) {
-			img {
-				float: left;
-				margin-right: 1rem;
-			}
-		}
-		.content {
-			padding: 1rem;
+		float: left;
+		height: 15em;
+		width: (($base-page-width - ($margin * ($columns - 1)) - em($base-border-width * 2)) / $columns);
+		margin-left: $margin;
+
+		&:first-child {
+			margin-left: 0;
 		}
 	}
 }
@@ -53,11 +39,12 @@ header {
 	$columns: 6;
 
 	max-width: $base-page-width;
-	margin: 0 auto 3rem;
+	margin: 0 auto 3em;
 	overflow: hidden;
+	clear: both;
 
 	.skill {
-		$margin: 1rem;
+		$margin: 1em;
 
 		float: left;
 		max-width: (($base-page-width - ($margin * ($columns - 1)) - em($base-border-width * 2)) / $columns);

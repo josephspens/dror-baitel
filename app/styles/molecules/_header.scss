@@ -1,0 +1,13 @@
+header {
+	font-size: 2rem;
+	background: $base-background-color image-url('header.jpg') no-repeat 0 100%;
+	background-size: cover;
+	@include box-shadow(inset 0 0 2em 0px $white);
+
+	h1 {
+		padding: 2.5em 0 0.5em;
+		color: $white;
+		text-align: center;
+		background-color: rgba($white, 0.1);
+	}
+}
