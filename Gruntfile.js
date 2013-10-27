@@ -172,7 +172,8 @@ module.exports = function (grunt) {
 				httpFontsPath: '/styles/fonts',
 				relativeAssets: false,
 				require: [
-					'sass-globbing'
+					'sass-globbing',
+					'susy'
 				]
 			},
 			dist: {

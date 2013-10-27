@@ -1,5 +1,7 @@
 {
 	"name": "dror-baitel",
+	"description": "Dror Baitel's personal portfolio website",
+	"repository": "",
 	"version": "0.0.0",
 	"dependencies": {},
 	"devDependencies": {
