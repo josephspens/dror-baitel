@@ -1,16 +1,30 @@
-// Backgrounds
+/////// Backgrounds ///////
 // -----------------------------------------------------------------------------
-.carbon-fiber-background {
+@mixin carbon-fiber-background {
 	background:
-	radial-gradient(black 15%, transparent 16%) 0 0,
-	radial-gradient(black 15%, transparent 16%) 8px 8px,
-	radial-gradient(rgba(255,255,255,0.1) 15%, transparent 20%) 0 1px,
-	radial-gradient(rgba(255,255,255,0.1) 15%, transparent 20%) 8px 9px;
-	background-color: #282828;
+		radial-gradient($navy-blue 15%, transparent 16%) 0 0,
+		radial-gradient($navy-blue 15%, transparent 16%) 8px 8px,
+		radial-gradient(rgba($beige,0.1) 15%, transparent 20%) 0 1px,
+		radial-gradient(rgba($beige,0.1) 15%, transparent 20%) 8px 9px;
+	background-color: $base-background-color;
 	background-size: 16px 16px;
 }
 
-// Mixins
+/////// Helper Classes ///////
+// -----------------------------------------------------------------------------
+%card {
+	@include border-radius($base-border-radius);
+	@include box-sizing(border-box);
+	background-color: $secondary-background-color;
+	overflow: hidden;
+	@include box-shadow(2px 2px 5px -1px rgba($black, 0.6));
+}
+
+.container {
+	@include container;
+}
+
+/////// Mixins ///////
 // -----------------------------------------------------------------------------
 @mixin flip {
 	position: relative;
@@ -26,7 +40,7 @@
 		width: 100%;
 		height: 100%;
 		@include transform-style(preserve-3d);
-		@include transition(all 0.5s linear);
+		@include transition(all 0.3s linear);
   }
 	.face {
 		position: absolute;
@@ -41,7 +55,21 @@
 	}
 }
 
-// Functions
+@mixin text-highlight($color) {
+	text-shadow: 1px 1px 0px $color;
+}
+@mixin dark-text-highlight {
+	@include text-highlight($beige);
+}
+@mixin light-text-highlight {
+	@include text-highlight($navy-blue);
+}
+
+@mixin border {
+	border: $base-border-width $base-border-style $base-border-color;
+}
+
+/////// Functions ///////
 // -----------------------------------------------------------------------------
 @function em ($value) {
 	@return ($value / $base-font-size) + 0em;

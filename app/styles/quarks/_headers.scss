@@ -1,10 +1,10 @@
 .light-header {
 	color: $white;
-	text-shadow: 1px 1px 0px $dark-grey;
+	@include light-text-highlight;
 }
 
 .fancy-header {
-	font-family: "Great Vibes", Helvetica Nueue, Helvetica, Arial, sans-serif;
+	font-family: $secondary-font;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	@extend .fancy-header;
 	@extend .light-header;
-	font-size: 5em;
+	font-size: 4em;
 }
 
 h2 {

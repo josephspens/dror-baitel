@@ -2,17 +2,14 @@
 	$spacing: 0.5em;
 
 	font-size: 1rem;
-	@include border-radius($base-border-radius);
-	@include box-sizing(border-box);
-	background-color: $base-background-color;
-	border: $base-border;
+	@extend %card;
 
-	h3 {
+	.content {
 		padding: $spacing;
 	}
 	p {
 		font-size: 0.8em;
-		padding: 0 $spacing $spacing;
+		padding-top: $spacing;
 	}
 	.image {
 		height: 6em;

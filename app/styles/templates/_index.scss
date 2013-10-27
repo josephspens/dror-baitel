@@ -1,57 +1,55 @@
+/////// Page Helpers ///////
+// -----------------------------------------------------------------------------
+%page-section {
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+/////// Page Styles ///////
+// -----------------------------------------------------------------------------
 body {
 	font-size: $base-font-size;
-	color: $dark-grey;
-	text-shadow: 1px 1px 0px $white;
+	color: $base-text-color;
+	@include light-text-highlight;
+	@include carbon-fiber-background;
 }
 
 #container {
-	background: image-url('sos.png');
 	overflow: hidden;
-	border-top: $base-border;
 }
 
-.container {
-	max-width: $base-page-width;
-	margin: 0 auto;
+#about {
+	@extend %page-section;
+	margin-top: 0;
 }
 
-.experiences {
+#experiences {
 	$columns: 3;
 
-	overflow: hidden;
-	padding: 3em 0;
+	@extend %page-section;
+	@include container;
 
 	.experience {
-		$margin: 1em;
-
-		float: left;
+		@include span-columns($total-columns / $columns);
 		height: 15em;
-		width: (($base-page-width - ($margin * ($columns - 1)) - em($base-border-width * 2)) / $columns);
-		margin-left: $margin;
 
-		&:first-child {
-			margin-left: 0;
+		&:nth-of-type(#{$columns}n) {
+			@include omega;
 		}
 	}
 }
 
-.skills {
+#skills {
 	$columns: 6;
 
-	max-width: $base-page-width;
-	margin: 0 auto 3em;
-	overflow: hidden;
-	clear: both;
+	@extend %page-section;
+	@include container;
 
 	.skill {
-		$margin: 1em;
+		@include span-columns($total-columns / $columns);
 
-		float: left;
-		max-width: (($base-page-width - ($margin * ($columns - 1)) - em($base-border-width * 2)) / $columns);
-		margin-left: $margin;
-
-		&:first-child {
-			margin-left: 0;
+		&:nth-of-type(#{$columns}n) {
+			@include omega;
 		}
 	}
 }

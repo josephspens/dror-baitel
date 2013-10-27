@@ -1,54 +1,59 @@
 /////// Config defaults for site colors ///////
 // -----------------------------------------------------------------------------
+// Base Colors
 $black: #000000;
 $white: #ffffff;
-
 $dark-grey: #444444;
 
-$red: #cc0000;
-$green: #009900;
-$blue: #0000cc;
+// Scheme Colors
+// https://kuler.adobe.com/Aspirin-C-color-theme-251864/
+$navy-blue: #225378;
+$cyan: #1695a3;
+$sky-blue: #acf0f2;
+$beige: #f3ffe2;
+$orange: #eb7f00;
 
-$base-background-color: #e6e6e6;
-$inverted-background-color: $dark-grey;
-$base-border-color: darken($base-background-color, 5);
-$base-box-shadow-color: $base-border-color;
+$base-background-color: $navy-blue;
+$secondary-background-color: $cyan;
 
 /////// Config defaults for site border style ///////
 // -----------------------------------------------------------------------------
 $base-border-radius: 3px;
 $base-border-width: 1px;
 $base-border-style: solid;
-$base-border: $base-border-width $base-border-style $base-border-color;
+$base-border-color: $beige;
+
+$base-box-shadow-color: $base-border-color;
 
 /////// Page dimension configuration ///////
 // -----------------------------------------------------------------------------
-$base-page-width: 70em;
 
 /////// Typography configuration ///////
 // -----------------------------------------------------------------------------
-$primary_font: Raleway, Helvetica, sans-serif;
-$secondary_font: Museo, serif;
+$primary-font: serif;
+$secondary-font: "Ostrich", "Helvetica Nueue", Helvetica, Arial, sans-serif;
 
 $base-font-size: 16px;
 $small-font-size: 12px;
 
+$base-text-color: $beige;
+$base-link-color: $orange;
+
 /////// Config defaults for buttons ///////
 // -----------------------------------------------------------------------------
 
+/////// Config for Susy grid ///////
+// -----------------------------------------------------------------------------
+$total-columns: 12;
+$column-width: 5rem;
+$gutter-width: 1rem;
+$grid-padding: 0;
+
 /////// UI @media breakpoint defaults ///////
 // -----------------------------------------------------------------------------
-$small-screen: 768px;
-$medium-screen: 1280px;
-$large-screen: 1440px;
-
-$screen: "only screen";
-$small: "only screen and (min-width: #{$small-screen})";
-$medium: "only screen and (min-width: #{$medium-screen})";
-$large: "only screen and (min-width: #{$large-screen})";
-$landscape: "only screen and (orientation: landscape)";
-$portrait: "only screen and (orientation: portrait)";
 
 /////// Site Icons and Images ///////
 // -----------------------------------------------------------------------------
 $base-image-width: 300px;
+
+$profile-image-width: $base-image-width;

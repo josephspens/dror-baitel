@@ -1,0 +1,25 @@
+#about {
+	@extend %card;
+	padding: 4em 0;
+
+	.image {
+		float: left;
+		border: 10px double $beige;
+
+		img {
+			display: block;
+		}
+	}
+	.content {
+		margin-left: $profile-image-width;
+		padding: 3em;
+
+		p {
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

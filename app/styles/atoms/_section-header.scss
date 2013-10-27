@@ -1,0 +1,9 @@
+.section-header {
+	text-align: center;
+	font-size: 2em;
+	margin: 1em 0;
+
+	h2 {
+		@include text-highlight($black);
+	}
+}

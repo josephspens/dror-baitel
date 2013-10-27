@@ -3,26 +3,32 @@
 	@include flip;
 
 	.face {
-		@include border-radius($base-border-radius);
-		@include box-sizing(border-box);
-		background-color: $base-background-color;
-		border: $base-border;
+		@extend %card;
 		text-align: center;
-
-		&.back {
-			padding: 2em;
+	}
+	.front {
+		h2 {
+			padding: 2em 0;
 		}
 	}
-	h2 {
+	.back {
 		padding: 2em;
-	}
-	.schools {
-		padding-top: 1em;
 
-		span {
-			@extend h2;
+		h3 {
+			font-size: 1.4em;
+		}
+	}
+	em {
+		&.large {
 			display: block;
-			padding: 0;
+			font-style: normal;
+			padding-top: 1em;
+
+			span {
+				@extend h2;
+				display: block;
+				padding: 0;
+			}
 		}
 	}
 	ul {
