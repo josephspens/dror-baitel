@@ -7,13 +7,6 @@
 
 /////// Page Styles ///////
 // -----------------------------------------------------------------------------
-body {
-	font-size: $base-font-size;
-	color: $base-text-color;
-	@include light-text-highlight;
-	@include carbon-fiber-background;
-}
-
 #container {
 	overflow: hidden;
 }

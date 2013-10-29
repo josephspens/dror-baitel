@@ -17,7 +17,7 @@
 	@include box-sizing(border-box);
 	background-color: $secondary-background-color;
 	overflow: hidden;
-	@include box-shadow(2px 2px 5px -1px rgba($black, 0.6));
+	@include box-shadow(2px 2px 5px -1px rgba($black, 0.8));
 }
 
 .container {
@@ -55,7 +55,7 @@
 	}
 }
 
-@mixin text-highlight($color) {
+@mixin text-highlight ($color) {
 	text-shadow: 1px 1px 0px $color;
 }
 @mixin dark-text-highlight {
@@ -67,6 +67,15 @@
 
 @mixin border {
 	border: $base-border-width $base-border-style $base-border-color;
+}
+
+@mixin long-text-shadow ($length, $color) {
+	$list: ();
+	@for $i from 1 through $length {
+		$list: append($list, unquote('#{$i}px #{$i}px #{$color}'), comma);
+	}
+
+	text-shadow: $list;
 }
 
 /////// Functions ///////
