@@ -145,8 +145,7 @@ module.exports = function (grunt) {
 				relativeAssets: false,
 				require: [
 					'sass-globbing',
-					'susy',
-					'font-awesome-sass'
+					'susy'
 				]
 			},
 			dist: {
