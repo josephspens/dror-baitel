@@ -22,14 +22,6 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		yeoman: yeomanConfig,
 		watch: {
-			coffee: {
-				files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-				tasks: ['coffee:dist']
-			},
-			coffeeTest: {
-				files: ['test/spec/{,*/}*.coffee'],
-				tasks: ['coffee:test']
-			},
 			compass: {
 				files: ['<%= yeoman.app %>/styles/**/*.{scss,sass}'],
 				tasks: ['compass:server', 'autoprefixer']
@@ -120,26 +112,6 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		coffee: {
-			dist: {
-				files: [{
-					expand: true,
-					cwd: '<%= yeoman.app %>/scripts',
-					src: '{,*/}*.coffee',
-					dest: '.tmp/scripts',
-					ext: '.js'
-				}]
-			},
-			test: {
-				files: [{
-					expand: true,
-					cwd: 'test/spec',
-					src: '{,*/}*.coffee',
-					dest: '.tmp/spec',
-					ext: '.js'
-				}]
-			}
-		},
 		handlebars: {
 			compile: {
 				options: {
@@ -173,7 +145,8 @@ module.exports = function (grunt) {
 				relativeAssets: false,
 				require: [
 					'sass-globbing',
-					'susy'
+					'susy',
+					'font-awesome-sass'
 				]
 			},
 			dist: {
@@ -353,15 +326,12 @@ module.exports = function (grunt) {
 		concurrent: {
 			server: [
 				'compass',
-				'coffee:dist',
 				'copy:styles'
 			],
 			test: [
-				'coffee',
 				'copy:styles'
 			],
 			dist: [
-				'coffee',
 				'compass',
 				'copy:styles',
 				'imagemin',

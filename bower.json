@@ -7,8 +7,7 @@
     "jquery": "~1.10.2",
     "handlebars.js": "~1.0.12",
     "handlebars-latest.js": "http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-latest.js",
-    "howler": "~1.1.14",
-    "font-awesome": "~4.0.1"
+    "howler": "~1.1.14"
   },
   "devDependencies": {}
 }
