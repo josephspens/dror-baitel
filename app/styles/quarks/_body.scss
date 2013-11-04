@@ -1,7 +1,7 @@
 body {
 	font-size: $base-font-size;
-	color: $base-text-color;
+	color: $default-text-color;
 	@include light-text-highlight;
-	@include carbon-fiber-background;
+	background-color: $secondary-background-color;
 	-webkit-font-smoothing: antialiased;
 }

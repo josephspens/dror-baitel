@@ -8,6 +8,6 @@ require.config({
 	}
 });
 
-require(['app', 'jquery'], function (app, $) {
+require([], function () {
 	'use strict';
 });

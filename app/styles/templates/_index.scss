@@ -1,52 +1,41 @@
-/////// Page Helpers ///////
-// -----------------------------------------------------------------------------
-%page-section {
-	margin-top: 3em;
-	margin-bottom: 3em;
-}
-
 /////// Page Styles ///////
 // -----------------------------------------------------------------------------
 #container {
+	@include container;
+	margin-top: $default-page-spacing;
+	margin-bottom: $default-page-spacing;
+}
+
+#video, #audio, #photo {
+	margin-bottom: $gutter-width;
+
+	h2 {
+		margin: 0 0 $gutter-width;
+		padding: 0.2em 0.5em;
+		background-color: $default-background-color;
+	}
+}
+
+#video {
 	overflow: hidden;
-}
 
-#about {
-	@extend %page-section;
-	margin-top: 0;
-}
+	.video {
+		@include equal-columns(2);
+		position: relative;
 
-#experiences {
-	$columns: 3;
-
-	@extend %page-section;
-	@include container;
-
-	.experience {
-		@include span-columns($total-columns / $columns);
-		height: 15em;
-
-		&:nth-of-type(#{$columns}n) {
-			@include omega;
+		&:before {
+			content: "";
+			display: block;
+			padding-top: 56.25%;
+		}
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
 		}
 	}
-}
-
-#skills {
-	$columns: 6;
-
-	@extend %page-section;
-	@include container;
-
-	.skill {
-		@include span-columns($total-columns / $columns);
-
-		&:nth-of-type(#{$columns}n) {
-			@include omega;
-		}
-	}
-}
-
-#audio {
-	@include container;
 }

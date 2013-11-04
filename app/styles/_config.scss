@@ -13,20 +13,30 @@ $sky-blue: #acf0f2;
 $beige: #f3ffe2;
 $orange: #eb7f00;
 
-$base-background-color: $navy-blue;
+$default-background-color: $navy-blue;
 $secondary-background-color: $cyan;
+
+$default-text-color: $beige;
+$default-link-color: $orange;
 
 /////// Config defaults for site border style ///////
 // -----------------------------------------------------------------------------
-$base-border-radius: 3px;
-$base-border-width: 1px;
-$base-border-style: solid;
-$base-border-color: $beige;
+$default-border-radius: 3px;
+$default-border-width: 1px;
+$default-border-style: solid;
+$default-border-color: $beige;
 
-$base-box-shadow-color: $base-border-color;
+$large-border-width: 5px;
+
+$default-box-shadow-h-offset: 2px;
+$default-box-shadow-v-offset: 2px;
+$default-box-shadow-blur: 5px;
+$default-box-shadow-spread: -1px;
+$default-box-shadow-color: rgba($black, 0.8);
 
 /////// Page dimension configuration ///////
 // -----------------------------------------------------------------------------
+$default-page-spacing: 3em;
 
 /////// Typography configuration ///////
 // -----------------------------------------------------------------------------
@@ -35,9 +45,6 @@ $secondary-font: "Ostrich", "Helvetica Nueue", Helvetica, Arial, sans-serif;
 
 $base-font-size: 16px;
 $small-font-size: 12px;
-
-$base-text-color: $beige;
-$base-link-color: $orange;
 
 /////// Config defaults for buttons ///////
 // -----------------------------------------------------------------------------
@@ -58,6 +65,6 @@ $grid-padding: 0;
 
 /////// Site Icons and Images ///////
 // -----------------------------------------------------------------------------
-$base-image-width: 300px;
+$default-image-width: 300px;
 
-$profile-image-width: $base-image-width;
+$profile-image-width: $default-image-width;

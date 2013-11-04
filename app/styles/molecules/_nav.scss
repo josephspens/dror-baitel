@@ -1,0 +1,33 @@
+#nav {
+	@include carbon-fiber-background;
+	text-align: center;
+	font-family: $secondary-font;
+	@include light-text;
+	overflow: hidden;
+
+	ul {
+		@include container;
+		margin-top: $default-page-spacing;
+		margin-bottom: $default-page-spacing;
+		overflow: hidden;
+	}
+	li {
+		font-size: 3em;
+		@include equal-columns(4);
+		background-color: $secondary-background-color;
+
+		&.active {
+			background-color: $default-text-color;
+			@include dark-text;
+		}
+	}
+	a {
+		display: block;
+		padding: 0.5em;
+		color: inherit;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

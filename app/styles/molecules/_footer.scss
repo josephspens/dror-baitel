@@ -1,5 +1,7 @@
 footer {
 	font-size: 1rem;
+	background-color: $secondary-background-color;
+	// @include single-box-shadow($default-box-shadow-color, $default-box-shadow-h-offset, ($default-box-shadow-v-offset * -1));
 
 	#contact {
 		padding: 2em;

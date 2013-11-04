@@ -6,18 +6,18 @@
 		radial-gradient($navy-blue 15%, transparent 16%) 8px 8px,
 		radial-gradient(rgba($beige,0.1) 15%, transparent 20%) 0 1px,
 		radial-gradient(rgba($beige,0.1) 15%, transparent 20%) 8px 9px;
-	background-color: $base-background-color;
+	background-color: $default-background-color;
 	background-size: 16px 16px;
 }
 
 /////// Helper Classes ///////
 // -----------------------------------------------------------------------------
 %card {
-	@include border-radius($base-border-radius);
+	@include border-radius($default-border-radius);
 	@include box-sizing(border-box);
 	background-color: $secondary-background-color;
 	overflow: hidden;
-	@include box-shadow(2px 2px 5px -1px rgba($black, 0.8));
+	@include box-shadow;
 }
 
 .container {
@@ -59,14 +59,32 @@
 	text-shadow: 1px 1px 0px $color;
 }
 @mixin dark-text-highlight {
-	@include text-highlight($beige);
+	@include text-highlight ($beige);
 }
 @mixin light-text-highlight {
-	@include text-highlight($navy-blue);
+	@include text-highlight ($navy-blue);
 }
 
-@mixin border {
-	border: $base-border-width $base-border-style $base-border-color;
+@mixin light-text {
+	@include light-text-highlight;
+	color: $default-text-color;
+}
+
+@mixin dark-text {
+	@include dark-text-highlight;
+	color: $navy-blue;
+}
+
+@mixin border ($side: all, $width: $default-border-width, $style: $default-border-style, $color: $default-border-color) {
+	$property: border;
+	@if $side != all {
+		$property: #{$property}-#{$side};
+	}
+	#{$property}: $width $style $color;
+}
+
+@mixin large-border ($side: all) {
+	@include border($side, $large-border-width);
 }
 
 @mixin long-text-shadow ($length, $color) {
@@ -76,6 +94,13 @@
 	}
 
 	text-shadow: $list;
+}
+
+/////// Susy Mixins ///////
+// -----------------------------------------------------------------------------
+@mixin equal-columns ($columns: 1) {
+	@include span-columns($total-columns / $columns);
+	@include nth-omega(#{$columns}n);
 }
 
 /////// Functions ///////
