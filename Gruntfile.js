@@ -138,7 +138,7 @@ module.exports = function (grunt) {
 				imagesDir: '<%= yeoman.app %>/images',
 				javascriptsDir: '<%= yeoman.app %>/scripts',
 				fontsDir: '<%= yeoman.app %>/styles/fonts',
-				importPath: '<%= yeoman.app %>/bower_components',
+				importPath: '<%= yeoman.app %>/components',
 				httpImagesPath: '/images',
 				httpGeneratedImagesPath: '/images/generated',
 				httpFontsPath: '/styles/fonts',
@@ -286,7 +286,7 @@ module.exports = function (grunt) {
 						'.htaccess',
 						'images/{,*/}*.{webp,gif}',
 						'styles/fonts/{,*/}*.*',
-						'bower_components/sass-bootstrap/fonts/*.{eot,woff,ttf,svg}'
+						'components/sass-bootstrap/fonts/*.{eot,woff,ttf,svg}'
 					]
 				},
 				{
@@ -313,8 +313,8 @@ module.exports = function (grunt) {
 			}
 		},
 		modernizr: {
-			devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-			outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
+			devFile: '<%= yeoman.app %>/components/modernizr/modernizr.js',
+			outputFile: '<%= yeoman.dist %>/components/modernizr/modernizr.js',
 			files: [
 				'<%= yeoman.dist %>/scripts/{,*/}*.js',
 				'<%= yeoman.dist %>/styles/{,*/}*.css',
