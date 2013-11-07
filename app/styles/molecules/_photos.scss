@@ -1,0 +1,55 @@
+#grid {
+	list-style: none;
+	padding: 0;
+
+	.photo {
+		display: block;
+		float: left;
+		padding: 1em;
+		width: 33%;
+		opacity: 0;
+		@include box-sizing(border-box);
+		text-align: center;
+
+		a, img {
+			outline: none;
+			border: none;
+			max-width: 100%;
+		}
+		a {
+			display: inline-block;
+			@include photo-border;
+		}
+		img {
+			display: block;
+		}
+	}
+
+	/* Effect 2: Move Up */
+	&.effect-2 {
+		.photo {
+			&.animate {
+				@include translateY(200px);
+				@include experimental('animation', moveUp 0.65s ease forwards, webkit, moz);
+			}
+		}
+	}
+}
+
+@-webkit-keyframes moveUp {
+	to { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@-moz-keyframes moveUp {
+	to { -moz-transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+	to { transform: translateY(0); opacity: 1; }
+}
+
+.photo.shown,
+.no-js .photo,
+.no-cssanimations .photo {
+	opacity: 1;
+}

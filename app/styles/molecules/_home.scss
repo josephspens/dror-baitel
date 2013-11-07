@@ -1,7 +1,7 @@
 #home {
 	.image {
 		float: left;
-		border: 10px double $beige;
+		@include photo-border;
 
 		img {
 			display: block;

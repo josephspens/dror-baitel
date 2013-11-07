@@ -87,6 +87,10 @@
 	@include border($side, $large-border-width);
 }
 
+@mixin photo-border {
+	@include border(all, $photo-border-width, $photo-border-style, $photo-border-color);
+}
+
 @mixin long-text-shadow ($length, $color) {
 	$list: ();
 	@for $i from 1 through $length {
