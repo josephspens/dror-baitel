@@ -115,8 +115,8 @@ module.exports = function (grunt) {
 		handlebars: {
 			compile: {
 				options: {
-					namespace: 'JS.Templates',
-					wrapped: true,
+					namespace: 'Baitel.Templates',
+					wrapped: false,
 					amd: true,
 					processName: function(filename) {
 						// funky name processing here
