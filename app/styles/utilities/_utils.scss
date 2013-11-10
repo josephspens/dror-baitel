@@ -13,7 +13,7 @@
 /////// Helper Classes ///////
 // -----------------------------------------------------------------------------
 %card {
-	@include border-radius($default-border-radius);
+	@include border-radius;
 	@include box-sizing(border-box);
 	background-color: $secondary-background-color;
 	overflow: hidden;

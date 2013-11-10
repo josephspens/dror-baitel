@@ -18,6 +18,8 @@ $secondary-background-color: $cyan;
 
 $default-text-color: $beige;
 $default-link-color: $orange;
+$default-button-color: $beige;
+$default-button-background-color: $orange;
 
 /////// Config defaults for site border style ///////
 // -----------------------------------------------------------------------------
@@ -52,6 +54,7 @@ $small-font-size: 12px;
 
 /////// Config defaults for buttons ///////
 // -----------------------------------------------------------------------------
+$default-button-box-shadow: 1px 1px 8px -1px $black;
 
 /////// Config for Font Awesome ///////
 // -----------------------------------------------------------------------------

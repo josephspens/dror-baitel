@@ -10,8 +10,12 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="stylesheet" href="styles/001a0b1c.main.css">
-		<script src="scripts/vendor/f7f27360.modernizr.js"></script>
+		<!-- build:css(.tmp) styles/main.css -->
+		<link rel="stylesheet" href="styles/main.css">
+		<!-- endbuild -->
+		<!-- build:js scripts/vendor/modernizr.js -->
+		<script src="components/modernizr/modernizr.js"></script>
+		<!-- endbuild -->
 	</head>
 	<body>
 		<!--[if lt IE 10]>
@@ -26,18 +30,23 @@
 			<ul>
 				<li class="home"><a href="/">Bio</a></li>
 				<li class="media"><a href="/media.html">Media</a></li>
-				<li class="schedule active"><a href="/schedule.html">Schedule</a></li>
-				<li class="contact"><a href="/contact.html">Contact</a></li>
+				<li class="schedule"><a href="/schedule.html">Schedule</a></li>
+				<li class="contact active"><a href="/contact.html">Contact</a></li>
 			</ul>
 		</nav>
 
 		<div id="container">
-			<section id="schedule">
-				<h2>Schedule</h2>
+			<section id="contact">
+				<h3>Contact me for further inquiry</h3>
+				<a class="btn" href="mailto:drorbaitel@yahoo.com">drorbaitel@yahoo.com</a>
 			</section>
 		</div>
 
-		<script src="scripts/1137e1f5.vendor.js"></script>
+		<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="components/jquery/jquery.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
@@ -49,6 +58,8 @@
 			ga('create','UA-XXXXX-X');ga('send','pageview');
 		</script>
 
-		<script data-main="scripts/13ebdc73.main" src="components/requirejs/require.js"></script>
+		<!-- build:js scripts/main.js -->
+		<script data-main="scripts/main" src="components/requirejs/require.js"></script>
+		<!-- endbuild -->
 </body>
 </html>
