@@ -1,7 +1,10 @@
 body {
-	font-size: $base-font-size;
+	font-size: $small-font-size;
 	color: $default-text-color;
 	@include light-text-highlight;
 	background-color: $secondary-background-color;
 	-webkit-font-smoothing: antialiased;
+	@include at-breakpoint($medium-viewport) {
+		font-size: $base-font-size;
+	}
 }

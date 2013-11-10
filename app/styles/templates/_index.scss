@@ -4,38 +4,8 @@
 	@include container;
 	margin-top: $default-page-spacing;
 	margin-bottom: $default-page-spacing;
-}
 
-#video, #audio, #photo, #schedule {
-	margin-bottom: $gutter-width * 3;
-
-	h2 {
-		margin: 0 0 $gutter-width;
-		padding: 0.2em 0.5em;
-		background-color: $default-background-color;
-	}
-}
-
-#video {
-	overflow: hidden;
-
-	.video {
-		@include equal-columns(2);
-		position: relative;
-
-		&:before {
-			content: "";
-			display: block;
-			padding-top: 56.25%;
-		}
-		iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			width: 100%;
-			height: 100%;
-		}
+	@include at-breakpoint($large-viewport) {
+		@include set-container-width;
 	}
 }

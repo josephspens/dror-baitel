@@ -7,15 +7,30 @@
 
 	ul {
 		@include container;
-		margin-top: $default-page-spacing;
-		margin-bottom: $default-page-spacing;
+		margin-top: $default-page-spacing / 2;
+		margin-bottom: $default-page-spacing / 2;
 		overflow: hidden;
+		@include at-breakpoint($medium-viewport) {
+			@include set-container-width;
+		}
+		@include at-breakpoint($large-viewport) {
+			@include set-container-width;
+		}
 	}
 	li {
-		font-size: 3em;
-		@include equal-columns(4);
+		$font-size: 3em;
+
+		font-size: $font-size;
 		background-color: $secondary-background-color;
+		margin-top: $default-page-spacing / (strip-units($font-size) * 4);
+		margin-bottom: $default-page-spacing / (strip-units($font-size) * 4);
 		@include border-radius;
+		@include at-breakpoint($medium-viewport) {
+			@include equal-columns(2);
+		}
+		@include at-breakpoint($large-viewport) {
+			@include equal-columns(4);
+		}
 
 		&.active {
 			background-color: $default-text-color;
@@ -24,7 +39,7 @@
 	}
 	a {
 		display: block;
-		padding: 0.5em;
+		padding: 0.5em 0 0.4em;
 		color: inherit;
 
 		&:hover {

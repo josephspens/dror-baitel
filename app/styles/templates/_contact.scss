@@ -8,7 +8,7 @@
 		font-size: 2em;
 		display: inline-block;
 		background-color: $default-button-background-color;
-		padding: 0.5em;
+		padding: 0.5em 2em;
 		@include border-radius;
 		color: $default-button-color;
 		@include box-shadow;

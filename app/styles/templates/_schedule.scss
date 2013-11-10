@@ -7,14 +7,20 @@
 			background-color: rgba($default-background-color, 0.4);
 		}
 		.meta {
-			@include span-columns(4, 12);
+			margin-bottom: $gutter-width;
+			@include at-breakpoint($medium-viewport) {
+				@include span-columns(4, 12);
+				margin-bottom: 0;
+			}
 
 			.date {
 				font-size: 1.2em;
 			}
 		}
 		.content {
-			@include span-columns(8 omega, 12);
+			@include at-breakpoint($medium-viewport) {
+				@include span-columns(8 omega, 12);
+			}
 
 			.title {
 				font-size: 1.3em;

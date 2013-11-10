@@ -11,6 +11,33 @@
 			}
 		}
 	}
+	.photo {
+		display: block;
+		float: left;
+		padding: $gutter-width;
+		width: 100%;
+		opacity: 0;
+		text-align: center;
+		@include at-breakpoint($medium-viewport) {
+			width: 50%;
+		}
+		@include at-breakpoint($large-viewport) {
+			width: 33%;
+		}
+
+		a, img {
+			outline: none;
+			border: none;
+			max-width: 100%;
+		}
+		a {
+			display: inline-block;
+			@include photo-border;
+		}
+		img {
+			display: block;
+		}
+	}
 }
 
 @-webkit-keyframes moveUp {

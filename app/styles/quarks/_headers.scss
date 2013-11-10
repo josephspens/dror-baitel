@@ -22,6 +22,7 @@ h1 {
 
 h2 {
 	@extend .fancy-header;
+	background-color: $default-background-color;
 	font-size: 3em;
 }
 

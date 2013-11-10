@@ -1,0 +1,32 @@
+#bio {
+	.image {
+		@include photo-border;
+		margin-bottom: $gutter-width;
+		@include at-breakpoint($medium-viewport) {
+			float: left;
+			margin-right: $gutter-width;
+		}
+		@include at-breakpoint($large-viewport) {
+			@include span-columns($total-columns / 3);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	.content {
+		@include at-breakpoint($large-viewport) {
+			padding: 3em;
+			@include span-columns(($total-columns * 2 / 3) omega);
+		}
+
+		p {
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
