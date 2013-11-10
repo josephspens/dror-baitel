@@ -2,10 +2,10 @@
 // -----------------------------------------------------------------------------
 @mixin carbon-fiber-background {
 	background:
-		radial-gradient($navy-blue 15%, transparent 16%) 0 0,
-		radial-gradient($navy-blue 15%, transparent 16%) 8px 8px,
-		radial-gradient(rgba($beige,0.1) 15%, transparent 20%) 0 1px,
-		radial-gradient(rgba($beige,0.1) 15%, transparent 20%) 8px 9px;
+		radial-gradient($secondary-color 15%, transparent 16%) 0 0,
+		radial-gradient($secondary-color 15%, transparent 16%) 8px 8px,
+		radial-gradient(rgba($off-color,0.1) 15%, transparent 20%) 0 1px,
+		radial-gradient(rgba($off-color,0.1) 15%, transparent 20%) 8px 9px;
 	background-color: $default-background-color;
 	background-size: 16px 16px;
 }
@@ -59,10 +59,10 @@
 	text-shadow: 1px 1px 0px $color;
 }
 @mixin dark-text-highlight {
-	@include text-highlight ($beige);
+	@include text-highlight ($off-color);
 }
 @mixin light-text-highlight {
-	@include text-highlight ($navy-blue);
+	@include text-highlight ($secondary-color);
 }
 
 @mixin light-text {
@@ -72,7 +72,7 @@
 
 @mixin dark-text {
 	@include dark-text-highlight;
-	color: $navy-blue;
+	color: $secondary-color;
 }
 
 @mixin border ($side: all, $width: $default-border-width, $style: $default-border-style, $color: $default-border-color) {

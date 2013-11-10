@@ -5,21 +5,34 @@ $black: #000000;
 $white: #ffffff;
 $dark-grey: #444444;
 
-// Scheme Colors
+//// Scheme Colors ////
 // https://kuler.adobe.com/Aspirin-C-color-theme-251864/
-$navy-blue: #225378;
-$cyan: #1695a3;
-$sky-blue: #acf0f2;
-$beige: #f3ffe2;
-$orange: #eb7f00;
+// $navy-blue: #225378;
+// $cyan: #1695a3;
+// $sky-blue: #acf0f2;
+// $beige: #f3ffe2;
+// $orange: #eb7f00;
 
-$default-background-color: $navy-blue;
-$secondary-background-color: $cyan;
+// https://kuler.adobe.com/Sea-Wolf-color-theme-782171/
+$red: #DC3522;
+$beige: #f3ffe2; // chaged from #D9CB9E
+$grey: #374140;
+$dark-grey: #2A2C2B;
+$black: #1E1E20;
 
-$default-text-color: $beige;
-$default-link-color: $orange;
-$default-button-color: $beige;
-$default-button-background-color: $orange;
+$primary-color: $black;
+$secondary-color: $dark-grey;
+$tertiary-color: $grey;
+$off-color: $beige;
+$action-color: $red;
+
+$default-background-color: $primary-color;
+$secondary-background-color: $secondary-color;
+
+$default-text-color: $off-color;
+$default-link-color: $action-color;
+$default-button-color: $off-color;
+$default-button-background-color: $action-color;
 
 /////// Config defaults for site border style ///////
 // -----------------------------------------------------------------------------
