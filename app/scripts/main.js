@@ -29,7 +29,7 @@ require(['jquery'], function ($) {
 				time = when.replace(date,'').trim();
 				where = entries[i].summary.$t.split('<br>')[2].replace(/(\n|\r)/,'').replace('Where: ','');
 				$entry = $('<li>').attr('class','schedule--entry');
-				$entryTitle = $('<div>').attr('class','title').html(entries[i].title.$t);
+				$entryTitle = $('<h3>').attr('class','title').html(entries[i].title.$t);
 				$entryLocation = $('<div>').attr('class','location').html(where);
 				$entryDate = $('<div>').attr('class','date').html(date);
 				$entryTime = $('<div>').attr('class','time').html(time);
