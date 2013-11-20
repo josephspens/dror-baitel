@@ -1,0 +1,5 @@
+.review {
+	@include at-breakpoint($medium-viewport) {
+		@include equal-columns(3);
+	}
+}

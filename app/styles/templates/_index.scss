@@ -1,11 +1,21 @@
 /////// Page Styles ///////
 // -----------------------------------------------------------------------------
-#container {
+.container {
 	@include container;
-	margin-top: $default-page-spacing;
-	margin-bottom: $default-page-spacing;
+	// margin-top: $default-page-spacing;
+	// margin-bottom: $default-page-spacing;
 
 	@include at-breakpoint($large-viewport) {
 		@include set-container-width;
+	}
+}
+
+section {
+	padding-top: $gutter-width * 3;
+	padding-bottom: $gutter-width * 3;
+
+	h2 {
+		margin: 0 0 $gutter-width;
+		padding: 0.3em 0.5em 0.1em;
 	}
 }

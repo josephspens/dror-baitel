@@ -1,12 +1,9 @@
 footer {
 	background-color: $default-background-color;
 
-	.container {
-		@include container;
+	.copyright {
 		padding-top: $grid-padding;
 		padding-bottom: $grid-padding;
-	}
-	.copyright {
 		text-align: center;
 		color: $tertiary-color;
 	}

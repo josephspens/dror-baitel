@@ -1,4 +1,10 @@
+#reviews {
+	background-color: $default-background-color;
+}
+
 #bio {
+	@include container;
+
 	.image {
 		@include photo-border;
 		margin-bottom: $gutter-width;
