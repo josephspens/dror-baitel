@@ -1,0 +1,15 @@
+blockquote {
+	margin: 0;
+	position: relative;
+
+	&:before {
+		content: "\"";
+		font-family: $quote-font;
+		font-size: 15em;
+		line-height: 0;
+		position: absolute;
+		top: 0.3em;
+		left: -0.2em;
+		opacity: 0.1;
+	}
+}

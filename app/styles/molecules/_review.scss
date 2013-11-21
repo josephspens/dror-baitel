@@ -1,5 +1,13 @@
 .review {
+	font-size: 1.2rem;
+	padding-left: 2.5em;
+	margin: 1em 0;
 	@include at-breakpoint($medium-viewport) {
-		@include equal-columns(3);
+		@include equal-columns(2);
+	}
+
+	cite {
+		display: block;
+		margin-top: 0.5em;
 	}
 }
