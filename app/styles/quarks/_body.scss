@@ -1,5 +1,6 @@
 body {
 	font-size: $small-font-size;
+	font-family: $primary-font;
 	color: $default-text-color;
 	@include light-text-highlight;
 	background-color: $secondary-background-color;

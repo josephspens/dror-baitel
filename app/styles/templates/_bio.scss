@@ -23,10 +23,13 @@
 	}
 	.content {
 		@include at-breakpoint($large-viewport) {
-			padding: 3em;
+			padding: 1em 2em;
 			@include span-columns(($total-columns * 2 / 3) omega);
 		}
 
+		h3 {
+			margin-bottom: 1em;
+		}
 		p {
 			margin-bottom: 1em;
 

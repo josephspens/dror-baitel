@@ -11,39 +11,37 @@ require.config({
 require(['jquery'], function ($) {
 	'use strict';
 
-	var feedUrl = 'tm6trusik9ch6iu4cejq7j5vng%40group.calendar.google.com';
-
-	$.getJSON('http://www.google.com/calendar/feeds/'+feedUrl+'/public/basic?alt=json-in-script&callback=?', function(data){
-		var feed = data.feed,
-				title = feed.title.$t,
-				entries = feed.entry,
-				$title = $('<h2>').text(title),
+	// $.getJSON('http://www.google.com/calendar/feeds/'+feedUrl+'/public/basic?alt=json-in-script&callback=?', function(data){
+	$.getJSON('https://spreadsheets.google.com/feeds/list/0AkdUPTzjR9_pdG82TjZtNGxpTEN0WUFocVNkVFVLQXc/od6/public/values?alt=json-in-script&callback=?', function(data){
+		console.log(data);
+		var entries = data.feed.entry,
 				$entries = $('<ul>').attr('class','schedule--entries');
 
 		(function () {
-			var i, when, time, date, where, $entry, $entryMeta, $entryDate, $entryTime, $entryTitle, $entryLocation, $entryContent;
+			var i, $entry, $entryMeta, $entryDate, $entryTime, $entryTitle, $entryLocation, $entryContent, $entryDescription;
 
 			for (i in entries) {
-				when = entries[i].summary.$t.split('<br>')[0].replace(/(&nbsp;)(\n|\r)(EST|EDT)/,'').replace('When: ','');
-				date = when.slice(0, when.search(/2[0-9]{3}/)+4).trim();
-				time = when.replace(date,'').trim();
-				where = entries[i].summary.$t.split('<br>')[2].replace(/(\n|\r)/,'').replace('Where: ','');
 				$entry = $('<li>').attr('class','schedule--entry');
-				$entryTitle = $('<h3>').attr('class','title').html(entries[i].title.$t);
-				$entryLocation = $('<div>').attr('class','location').html(where);
-				$entryDate = $('<div>').attr('class','date').html(date);
-				$entryTime = $('<div>').attr('class','time').html(time);
-				$entryMeta = $('<div>').attr('class','meta').html($entryDate).append($entryTime);
-				$entryContent = $('<div>').attr('class','content').append($entryTitle);
-				if (where.search('Event Status:') !== 0) {
-					$entryContent.append($entryLocation);
-				}
+				$entryContent = $('<div>').attr('class','content');
+				$entryMeta = $('<div>').attr('class','meta');
+
+				$entryDate = $('<div>').attr('class','date').text(entries[i].gsx$date.$t);
+				$entryTime = $('<div>').attr('class','time').text(entries[i].gsx$starttime.$t + ' to ' + entries[i].gsx$endtime.$t);
+				$entryMeta.append($entryDate);
+				$entryMeta.append($entryTime);
+
+				$entryTitle = $('<h3>').attr('class','title').text(entries[i].gsx$title.$t);
+				$entryLocation = $('<div>').attr('class','location').html(entries[i].gsx$location.$t);
+				$entryDescription = $('<p>').attr('class','description').html($('<pre>').html(entries[i].gsx$description.$t.replace(/\r\n/g,'<br>')));
+				$entryContent.append($entryTitle);
+				$entryContent.append($entryLocation);
+				$entryContent.append($entryDescription);
 
 				$entry.append($entryMeta).append($entryContent);
 				$entries.append($entry);
 			}
 		})();
 
-		$('#schedule').html('').append($title).append($entries);
+		$('#schedule').html('').append($('<h2>').text(data.feed.title.$t)).append($entries);
 	});
 });

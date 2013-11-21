@@ -59,7 +59,7 @@ $default-page-spacing: 3em;
 
 /////// Typography configuration ///////
 // -----------------------------------------------------------------------------
-$primary-font: serif;
+$primary-font: "Helvetica Nueue", Helvetica, Arial, sans-serif;
 $secondary-font: "Ostrich", "Helvetica Nueue", Helvetica, Arial, sans-serif;
 $quote-font: "Janda Quirky Girl", serif;
 
@@ -86,7 +86,7 @@ $large-columns: 12;
 
 /////// UI @media breakpoint defaults ///////
 // -----------------------------------------------------------------------------
-$medium-viewport: 30em $medium-columns;
+$medium-viewport: 40em $medium-columns;
 $large-viewport: 60em $large-columns;
 
 /////// Site Icons and Images ///////
