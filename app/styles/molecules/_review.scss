@@ -5,9 +5,4 @@
 	@include at-breakpoint($medium-viewport) {
 		@include equal-columns(2);
 	}
-
-	cite {
-		display: block;
-		margin-top: 0.5em;
-	}
 }
