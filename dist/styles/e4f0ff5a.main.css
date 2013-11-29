@@ -44,7 +44,7 @@ pre {
 
 @media -sass-debug-info {
   filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/atoms\/_section-header\.scss;
+    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/atoms\/_video\.scss;
   }
 
   line {
@@ -52,8 +52,108 @@ pre {
   }
 }
 
-.section-header {
-  background-color: #1e1e20;
+.media-video {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 60em) {
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/atoms\/_video\.scss;
+    }
+
+    line {
+      font-family: \000031;
+    }
+}
+
+  .media-video {
+    width: 49.29577%;
+    float: left;
+    margin-right: 1.40845%;
+  }
+
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/joseph\/\.rvm\/gems\/ruby-2\.0\.0-p247\/gems\/susy-1\.0\.9\/sass\/susy\/_grid\.scss;
+    }
+
+    line {
+      font-family: \00003251;
+    }
+}
+
+  .media-video:nth-child(1n) {
+    float: left;
+    margin-right: 1.40845%;
+  }
+
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/joseph\/\.rvm\/gems\/ruby-2\.0\.0-p247\/gems\/susy-1\.0\.9\/sass\/susy\/_grid\.scss;
+    }
+
+    line {
+      font-family: \00003251;
+    }
+}
+
+  .media-video:nth-child(2n) {
+    float: left;
+    margin-right: 1.40845%;
+  }
+
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/joseph\/\.rvm\/gems\/ruby-2\.0\.0-p247\/gems\/susy-1\.0\.9\/sass\/susy\/_grid\.scss;
+    }
+
+    line {
+      font-family: \00003184;
+    }
+}
+
+  .media-video:nth-child(2n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/atoms\/_video\.scss;
+  }
+
+  line {
+    font-family: \000038;
+  }
+}
+
+.media-video:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/atoms\/_video\.scss;
+  }
+
+  line {
+    font-family: \0000313;
+  }
+}
+
+.media-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media -sass-debug-info {
@@ -1059,7 +1159,9 @@ section {
   }
 }
 
-section h2 {
+section .section-header {
+  background-color: #1e1e20;
+  clear: both;
   margin: 0 0 1rem;
   padding: 0.3em 0.5em 0.1em;
 }
@@ -1099,221 +1201,4 @@ section h2 {
 }
 
 #schedule .schedule--entry:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss;
-  }
-
-  line {
-    font-family: \000036;
-  }
-}
-
-#schedule .schedule--entry:nth-child(2n-1) {
-  background-color: rgba(30, 30, 32, 0.4);
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss;
-  }
-
-  line {
-    font-family: \000039;
-  }
-}
-
-#schedule .schedule--entry .meta {
-  font-size: 0.8em;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 40em) {
-@media -sass-debug-info {
-    filename {
-      font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss;
-    }
-
-    line {
-      font-family: \000039;
-    }
-}
-
-  #schedule .schedule--entry .meta {
-    width: 32.39437%;
-    float: left;
-    margin-right: 1.40845%;
-    font-size: 1em;
-    margin-bottom: 0;
-  }
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss;
-  }
-
-  line {
-    font-family: \0000318;
-  }
-}
-
-#schedule .schedule--entry .meta .date {
-  font-size: 1.2em;
-}
-
-@media (min-width: 40em) {
-@media -sass-debug-info {
-    filename {
-      font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss;
-    }
-
-    line {
-      font-family: \0000322;
-    }
-}
-
-  #schedule .schedule--entry .content {
-    width: 66.19718%;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss;
-  }
-
-  line {
-    font-family: \0000327;
-  }
-}
-
-#schedule .schedule--entry .content .title {
-  font-weight: bold;
-  margin-bottom: 0.2em;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss;
-  }
-
-  line {
-    font-family: \0000331;
-  }
-}
-
-#schedule .schedule--entry .content .location {
-  margin-bottom: 0.5em;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_video\.scss;
-  }
-
-  line {
-    font-family: \000031;
-  }
-}
-
-#video {
-  overflow: hidden;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_video\.scss;
-  }
-
-  line {
-    font-family: \000034;
-  }
-}
-
-#video .video {
-  position: relative;
-}
-
-@media (min-width: 60em) {
-@media -sass-debug-info {
-    filename {
-      font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_video\.scss;
-    }
-
-    line {
-      font-family: \000034;
-    }
-}
-
-  #video .video {
-    width: 49.29577%;
-    float: left;
-    margin-right: 1.40845%;
-  }
-
-@media -sass-debug-info {
-    filename {
-      font-family: file\:\/\/\/Users\/joseph\/\.rvm\/gems\/ruby-2\.0\.0-p247\/gems\/susy-1\.0\.9\/sass\/susy\/_grid\.scss;
-    }
-
-    line {
-      font-family: \00003251;
-    }
-}
-
-  #video .video:nth-child(1n) {
-    float: left;
-    margin-right: 1.40845%;
-  }
-
-@media -sass-debug-info {
-    filename {
-      font-family: file\:\/\/\/Users\/joseph\/\.rvm\/gems\/ruby-2\.0\.0-p247\/gems\/susy-1\.0\.9\/sass\/susy\/_grid\.scss;
-    }
-
-    line {
-      font-family: \00003251;
-    }
-}
-
-  #video .video:nth-child(2n) {
-    float: left;
-    margin-right: 1.40845%;
-  }
-
-@media -sass-debug-info {
-    filename {
-      font-family: file\:\/\/\/Users\/joseph\/\.rvm\/gems\/ruby-2\.0\.0-p247\/gems\/susy-1\.0\.9\/sass\/susy\/_grid\.scss;
-    }
-
-    line {
-      font-family: \00003184;
-    }
-}
-
-  #video .video:nth-child(2n) {
-    float: right;
-    margin-right: 0;
-  }
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_video\.scss;
-  }
-
-  line {
-    font-family: \0000310;
-  }
-}
-
-#video .video:before {
-  content: "";display:block;padding-top:56.25%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_video\.scss}line{font-family:\0000315}}#video .video iframe{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%}
+  content: "";display:table;clear:both}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss}line{font-family:\000036}}#schedule .schedule--entry:nth-child(2n-1){background-color:rgba(30,30,32,.4)}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss}line{font-family:\000039}}#schedule .schedule--entry .meta{font-size:.8em;margin-bottom:1rem}@media (min-width:40em){@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss}line{font-family:\000039}}#schedule .schedule--entry .meta{width:32.39437%;float:left;margin-right:1.40845%;font-size:1em;margin-bottom:0}}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss}line{font-family:\0000318}}#schedule .schedule--entry .meta .date{font-size:1.2em}@media (min-width:40em){@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss}line{font-family:\0000322}}#schedule .schedule--entry .content{width:66.19718%;float:right;margin-right:0}}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss}line{font-family:\0000327}}#schedule .schedule--entry .content .title{font-weight:700;margin-bottom:.2em}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joseph\/Development\/dror-baitel\/app\/styles\/templates\/_schedule\.scss}line{font-family:\0000331}}#schedule .schedule--entry .content .location{margin-bottom:.5em}
