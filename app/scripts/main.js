@@ -42,6 +42,6 @@ require(['jquery'], function ($) {
 			}
 		})();
 
-		$('#schedule').html('').append($('<h2>').text(data.feed.title.$t)).append($entries);
+		$('#schedule').html('').append($('<h2 class="section-header">').text(data.feed.title.$t)).append($entries);
 	});
 });
