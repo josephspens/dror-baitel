@@ -10,4 +10,5 @@ deploy:
   skip_cleanup: true
   strategy: git
 script:
+    - ./node_modules/bower/bin/bower install
     - ./node_modules/grunt-cli/bin/grunt build
