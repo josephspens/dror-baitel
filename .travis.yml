@@ -6,13 +6,5 @@ deploy:
     secure: B6KgZ0t7iO2AdsMlsxk7NisgZ7GmwO4A7y1a2jlcHGkf16KDGyd4hDcXVb8LOaGHpOTehgCI3VEWmPdElafSM6PeG83ttKTjOfxIPsUTvW9A4/q0njkl1cvJchHz+qm4BYgUJ3fu+Pl3r2LZLAXka/vQzn8SZNnhGp4bedgYeLg=
   skip_cleanup: true
   strategy: git
-after_success:
- - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
- - git remote add heroku git@heroku.com:dror-baitel.git
- - echo "Host heroku.com" >> ~/.ssh/config
- - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
- - echo "   CheckHostIP no" >> ~/.ssh/config
- - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
- - heroku keys:clear
- - yes | heroku keys:add
- - yes | git subtree push --prefix dist heroku master
+script:
+    - ./node_modules/grunt-cli/bin/grunt build
