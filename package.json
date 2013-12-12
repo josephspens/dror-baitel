@@ -13,6 +13,7 @@
     "email": "joseph@spens.us",
     "url": "http://spens.us"
   },
+  "main": "dist/server.js",
   "dependencies": {
     "statik": "~1.2.5",
     "express": "~3.4.7"
