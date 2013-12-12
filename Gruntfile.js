@@ -301,27 +301,13 @@ module.exports = function (grunt) {
 					cwd: '<%= yeoman.app %>',
 					dest: '<%= yeoman.dist %>',
 					src: [
-						'*.{ico,png,txt}',
+						'*.{ico,png,txt,js}',
 						'.htaccess',
 						'images/{,*/}*.{webp,gif}',
 						'styles/fonts/{,*/}*.*',
 						'scripts/vendor/{,*/}*.*',
 						'components/sass-bootstrap/fonts/*.{eot,woff,ttf,svg}'
 					]
-				},
-				{
-					expand: true,
-					dot: true,
-					cwd: 'heroku',
-					dest: '<%= yeoman.dist %>',
-					src: '*',
-					rename: function (dest, src) {
-						var path = require('path');
-						if (src === 'distpackage.json') {
-							return path.join(dest, 'package.json');
-						}
-						return path.join(dest, src);
-					}
 				}]
 			},
 			styles: {
