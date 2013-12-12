@@ -13,10 +13,11 @@
     "email": "joseph@spens.us",
     "url": "http://spens.us"
   },
-  "main": "dist/server.js",
+  "main": "server.js",
   "dependencies": {
     "statik": "~1.2.5",
-    "express": "~3.4.7"
+    "express": "~3.4.7",
+    "path": "~0.4.9"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
