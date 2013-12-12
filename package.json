@@ -1,8 +1,19 @@
 {
   "name": "dror-baitel",
+  "title": "Dror Baitel",
   "description": "Dror Baitel's personal portfolio website",
-  "repository": "",
+  "homepage": "http://www.drorbaitel.com",
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/josephspens/dror-baitel"
+  },
   "version": "0.0.0",
+  "author": {
+  	"name": "Joseph Spens",
+  	"email": "joseph@spens.us",
+  	"url": "http://spens.us"
+  },
+  "main": "dist/server.js",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
