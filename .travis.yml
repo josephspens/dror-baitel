@@ -3,12 +3,9 @@ node_js:
  - "0.10"
 rvm:
  - "1.9.3"
-deploy:
- provider: heroku
- api_key:
-  secure: B6KgZ0t7iO2AdsMlsxk7NisgZ7GmwO4A7y1a2jlcHGkf16KDGyd4hDcXVb8LOaGHpOTehgCI3VEWmPdElafSM6PeG83ttKTjOfxIPsUTvW9A4/q0njkl1cvJchHz+qm4BYgUJ3fu+Pl3r2LZLAXka/vQzn8SZNnhGp4bedgYeLg=
- skip_cleanup: true
- strategy: git
+branches:
+ only:
+  - master
 before_script:
  # install dependencies
  - gem update --system
@@ -18,3 +15,9 @@ script:
  # We want to gate on passing tests and a successful build
  - bower install
  - grunt
+deploy:
+ provider: heroku
+ api_key:
+  secure: B6KgZ0t7iO2AdsMlsxk7NisgZ7GmwO4A7y1a2jlcHGkf16KDGyd4hDcXVb8LOaGHpOTehgCI3VEWmPdElafSM6PeG83ttKTjOfxIPsUTvW9A4/q0njkl1cvJchHz+qm4BYgUJ3fu+Pl3r2LZLAXka/vQzn8SZNnhGp4bedgYeLg=
+ skip_cleanup: true
+ strategy: git
