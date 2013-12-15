@@ -5,7 +5,7 @@ rvm:
  - "1.9.3"
 branches:
  only:
-  - master
+  - development
 before_script:
  # install dependencies
  - gem update --system
