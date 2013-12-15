@@ -27,12 +27,13 @@
 			@include span-columns(($total-columns * 2 / 3) omega);
 		}
 
-		h3 {
-			margin-bottom: 1em;
-		}
 		p {
 			margin-bottom: 1em;
 
+			&:first-child {
+				@extend h3;
+				margin-bottom: 1em;
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}
