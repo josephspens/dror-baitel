@@ -18,6 +18,7 @@ script:
 after_success:
  # Any command that using GH_OAUTH_TOKEN must pipe the output to /dev/null to not expose your oauth token
  - git submodule add -b master https://aAWm33y3gx8XyB08Rz/wIYnws5PMehxwsqcDbzT0PDreTgX/y7lG/gRQJkB2/tLhDJwnnirA59PHea3oxsEjPveCc174FbtT/+TmmJI7UKotmeJO9B3mmP2/QiEgRo3z+yCcY7uZhO5/+2BcPNmGCTL6D3d1yHJ14OFFeGVIzLs=@github.com/josephspens/dror-baitel site > /dev/null 2>&1
+ - mkdir site
  - cd site
  - if git checkout master; then git checkout -b master; fi
  - git rm -r .
